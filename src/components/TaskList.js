@@ -4,6 +4,8 @@ import Checkbox from "./Checkbox";
 const TaskList = props => {
     const {list, setList}=props;
 
+
+
     
 
     const onChangeStatus = e =>{
@@ -19,9 +21,9 @@ const TaskList = props => {
         const updateList=list.filter(item => !item.done);
         setList(updateList);
     };
-
+    console.log(list)
     const check = list.map(item => (
-    <Checkbox key={item.id} data={item} onChange={onChangeStatus} />
+    <Checkbox key={item?.id} data={item} onChange={onChangeStatus} />
     ));
 
   return (
@@ -34,6 +36,7 @@ const TaskList = props => {
                     Eliminar seleccion
                 </button>
             </p>
+            
         ) : null}
         
     </div>

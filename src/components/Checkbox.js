@@ -3,7 +3,7 @@ import React from "react";
 const Checkbox = (props) => {
   const {
     onChange,
-    data: { id, description, done },
+    data: { id, label, done },
   } = props;
 
   return (
@@ -44,7 +44,7 @@ const Checkbox = (props) => {
           <use xlinkHref="#todo__circle" className="todo__circle" />
         </svg>
 
-        <div className="todo__text">{description}</div>
+        <div className="todo__text">{label}</div>
       </label>
 
       
