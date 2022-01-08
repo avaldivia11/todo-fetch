@@ -22,8 +22,8 @@ const TaskList = props => {
         setList(updateList);
     };
     console.log(list)
-    const check = list.map(item => (
-    <Checkbox key={item?.id} data={item} onChange={onChangeStatus} />
+    const check = list.map((item, value) => (
+    <Checkbox key={value} data={item} onChange={onChangeStatus} />
     ));
 
   return (
